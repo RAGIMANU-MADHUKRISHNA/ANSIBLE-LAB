@@ -1,0 +1,13 @@
+--- 
+- name:
+  hosts: centos
+  become: true
+  tasks:
+   - name: install httpd server
+     yum:
+       name: httpd
+       state: latest
+   - name: start httpd
+     service:
+       name: httpd
+       state: started

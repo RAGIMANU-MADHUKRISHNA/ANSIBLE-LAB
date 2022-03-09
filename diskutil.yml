@@ -1,0 +1,11 @@
+---
+- name: check disk space
+  hosts: all
+  become: true
+  tasks:
+    - name: disk usage from command
+      command: df -h
+      register: use
+    - debug:
+        var: use
+

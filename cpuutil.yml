@@ -1,0 +1,11 @@
+---
+- name: high cpu 
+  hosts: all
+  become: true
+  tasks:
+    - name: high cpu usage from command
+      command: ps -eo
+      register: use
+    - debug:
+        var: use
+

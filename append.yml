@@ -1,0 +1,8 @@
+---
+- hosts: centos
+  become: true
+  tasks:
+     - name: appending data
+       lineinfie:
+           path: /root/ans_imp/data.yml
+           line: " hi one and all"

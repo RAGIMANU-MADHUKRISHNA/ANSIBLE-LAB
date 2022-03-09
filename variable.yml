@@ -1,0 +1,11 @@
+---
+- name: Display variable
+  hosts: all
+  vars:
+   txt: these is the variable file
+  tasks:
+    - name: disply text
+      debug: var=txt
+    - name: disply txt
+      debug:
+        msg: "{{txt}}"

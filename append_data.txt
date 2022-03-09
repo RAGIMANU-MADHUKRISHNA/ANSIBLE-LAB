@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+    - name: line insert
+      lineinfile:
+        path: /etc/ansible/ansible.cfg/file.cfg
+        line: 'Added Line 1'
+        insertbefore: BOF
